@@ -1,0 +1,49 @@
+.main-page-container {
+  height: 100vh;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  width: 12rem;
+  justify-content: space-between;
+}
+
+.socials > a {
+  color: var(--txt-light);
+}
+
+.socials-icon:hover,
+.socials-icon:focus {
+  transition: color ease-in 0.3s;
+  color: var(--col-pink);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-25px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.down-arrow {
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  animation: bounce 2s none 0.5s infinite;
+}
