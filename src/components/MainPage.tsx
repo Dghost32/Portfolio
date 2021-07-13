@@ -9,25 +9,26 @@ import Tooltip from "@material-ui/core/Tooltip";
 const MainPage = () => {
   return (
     <div id="main-page" className="main-page-container">
-      <span className="txt-sm txt-ws txt-light">Hi, i'm</span>
-      <div className="txt-sb txt-wb">
-        <span className="txt-light"> &lt; </span>
-        <span className="txt-pink">Carlos </span>
-        <span className="txt-light">Jimenez</span>
-        <span className="txt-pink"> /&gt;</span>
-      </div>
-      <span className="txt-ss txt-ws txt-light">Jr FrontEnd Developer</span>
+      <MyInfo />
       <Socials />
-      <i
-        className="txt-light txt-sm txt-wb down-arrow"
-        onClick={() => document.getElementById("whoami")?.scrollIntoView()}
-      >
-        <BsChevronDoubleDown />
-      </i>
+      <GoDownArrow />
     </div>
   );
 };
 export default MainPage;
+
+const MyInfo = () => (
+  <>
+    <span className="txt-sm txt-ws txt-light">Hi, i'm</span>
+    <div className="txt-sb txt-wb">
+      <span className="txt-light"> &lt; </span>
+      <span className="txt-pink">Carlos </span>
+      <span className="txt-light">Jimenez</span>
+      <span className="txt-pink"> /&gt;</span>
+    </div>
+    <span className="txt-ss txt-ws txt-light">Jr FrontEnd Developer</span>
+  </>
+);
 
 const Socials = () => (
   <div className="txt-light txt-sb socials">
@@ -61,4 +62,13 @@ const Socials = () => (
       </i>
     </Tooltip>
   </div>
+);
+
+const GoDownArrow = () => (
+  <i
+    className="txt-light txt-sm txt-wb down-arrow"
+    onClick={() => document.getElementById("whoami")?.scrollIntoView()}
+  >
+    <BsChevronDoubleDown />
+  </i>
 );
