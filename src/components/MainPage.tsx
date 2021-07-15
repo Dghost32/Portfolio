@@ -56,7 +56,7 @@ const Socials = () => (
         </i>
       </a>
     </Tooltip>
-    <Tooltip title="Whatsapp">
+    <Tooltip title="Whatsapp - (+57) 3209503168">
       <i className="socials-icon" aria-label="whatsapp">
         <AiOutlineWhatsApp />
       </i>

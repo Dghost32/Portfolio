@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
+import Navigation from "./components/Navigation";
 import MainPage from "./components/MainPage";
 
 function App() {
   return (
     <div className="app">
+      <Navigation />
       <MainPage />
       <div id="whoami" style={{ height: "100vh" }}></div>
       <div
