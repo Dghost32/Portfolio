@@ -11,6 +11,10 @@
   --col-pink: #c2185b;
 }
 
+.app {
+  overflow-x: hidden;
+}
+
 .txt-pink {
   color: var(--col-pink);
 }

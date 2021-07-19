@@ -1,20 +1,22 @@
 import React from "react";
 import "./App.css";
+import "./Scrollbar.css";
 import Navigation from "./components/Navigation";
 import MainPage from "./components/MainPage";
+import Whoami from "./components/Whoami";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 function App() {
   return (
     <div className="app">
       <Navigation />
       <MainPage />
-      <div id="whoami" style={{ height: "100vh" }}></div>
-      <div
-        id="projects"
-        style={{ height: "100vh", background: "#1a1a1a" }}
-      ></div>
-      <div id="skills" style={{ height: "100vh" }}></div>
-      <div id="contact" style={{ height: "20vh", background: "#1a1a1a" }}></div>
+      <Whoami />
+      <Projects />
+      <Skills />
+      <Contact />
     </div>
   );
 }

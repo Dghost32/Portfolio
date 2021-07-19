@@ -56,19 +56,30 @@ const Socials = () => (
         </i>
       </a>
     </Tooltip>
-    <Tooltip title="Whatsapp - (+57) 3209503168">
-      <i className="socials-icon" aria-label="whatsapp">
-        <AiOutlineWhatsApp />
-      </i>
+    <Tooltip title="Whatsapp">
+      <a
+        aria-label="Whatsapp"
+        href="https://wa.me/+573016244869"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <i className="socials-icon" aria-label="whatsapp">
+          <AiOutlineWhatsApp />
+        </i>
+      </a>
     </Tooltip>
   </div>
 );
 
 const GoDownArrow = () => (
-  <i
-    className="txt-light txt-sm txt-wb down-arrow"
-    onClick={() => document.getElementById("whoami")?.scrollIntoView()}
-  >
-    <BsChevronDoubleDown />
-  </i>
+  <div className="triangle">
+    <div className="down-arrow-container">
+      <i
+        className="txt-dark txt-sm txt-wb down-arrow"
+        onClick={() => document.getElementById("whoami")?.scrollIntoView()}
+      >
+        <BsChevronDoubleDown />
+      </i>
+    </div>
+  </div>
 );
