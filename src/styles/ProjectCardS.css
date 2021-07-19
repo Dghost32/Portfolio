@@ -1,0 +1,23 @@
+.project-card {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  width: 12.5rem;
+  height: 16.625rem;
+  border-radius: 0.625rem;
+  background-color: var(--col-light);
+}
+
+@media (max-width: 800px) {
+  .project-card {
+    width: 9.375rem;
+    height: 12.5rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .project-card {
+    width: 7.0625rem;
+    height: 9.375rem;
+  }
+}

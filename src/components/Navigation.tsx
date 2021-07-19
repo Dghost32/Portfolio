@@ -4,7 +4,7 @@ import "../styles/Navigation.css";
 
 const Navigation = () => {
   return (
-    <Dropdown>
+    <Dropdown id="navigation">
       <NavButton />
       <NavMenu />
     </Dropdown>

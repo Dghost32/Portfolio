@@ -9,3 +9,51 @@
   flex-wrap: wrap;
   flex-direction: column;
 }
+
+.whoami-content {
+  width: 35vw;
+}
+
+.hobies {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hobies-two {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-ball {
+  position: absolute;
+  bottom: -10vw;
+  left: -5vw;
+  width: 20vw;
+  height: 20vw;
+  background-color: var(--col-dark);
+  border-radius: 50%;
+}
+
+@media (max-width: 1300px) {
+  .whoami-content {
+    width: 60vw;
+  }
+
+  .hobies-two {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 750px) {
+  .whoami-content {
+    width: 70vw;
+  }
+
+  .hobies {
+    visibility: hidden;
+  }
+}
