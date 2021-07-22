@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ProjectsS.css";
+import "../styles/Projects.css";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
@@ -12,6 +12,11 @@ const Projects = () => {
         </p>
 
         <div className="projects-cards-container">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />

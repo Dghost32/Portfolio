@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/WhoamiS.css";
+import "../styles/Whoami.css";
 
 const Whoami = () => {
   return (

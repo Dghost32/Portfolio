@@ -1,0 +1,15 @@
+.skill {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 24%;
+}
+
+.skill-icon {
+  font-size: 4rem;
+  color: rgba(26, 26, 26, 0.75);
+}
+
+.skill-name {
+  font-size: 1rem;
+}

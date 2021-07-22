@@ -1,10 +1,13 @@
 import React from "react";
-import "../styles/MainPageS.css";
+/* Components */
+import Tooltip from "@material-ui/core/Tooltip";
+/* Styles */
+import "../styles/MainPage.css";
+/* icons */
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { BsChevronDoubleDown } from "react-icons/bs";
-import Tooltip from "@material-ui/core/Tooltip";
 
 const MainPage = () => {
   return (
