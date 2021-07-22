@@ -7,6 +7,8 @@ import { DiCss3, DiReact, DiGitBranch } from "react-icons/di";
 import { SiJavascript, SiTypescript, SiMaterialUi } from "react-icons/si";
 /* types */
 import skill from "../types/skill";
+/* Components */
+import Skill from "../components/Skill";
 
 /* Skills array, to add a new skill just need to add a new skill object to this array according to skill's object interface*/
 let skills: Array<skill> = [
@@ -70,6 +72,7 @@ let skills: Array<skill> = [
     name: "Bootstrap",
     icon: <FaBootstrap />,
     filter: {
+      front: 1,
       design: 1,
     },
   },
@@ -77,6 +80,7 @@ let skills: Array<skill> = [
     name: "Material-Ui",
     icon: <SiMaterialUi />,
     filter: {
+      front: 1,
       design: 1,
     },
   },
@@ -90,3 +94,15 @@ let skills: Array<skill> = [
 ];
 
 export default skills;
+
+export let filterSkills = (
+  filter: "front" | "back" | "design" | undefined
+): Array<JSX.Element> => {
+  if (!filter)
+    return skills.map((skill: skill) => (
+      <Skill key={`skill-${skill.name}`} skill={skill} />
+    ));
+  return skills
+    .filter((skill: skill) => skill.filter[filter] === 1)
+    .map((skill: skill) => <Skill key={`skill-${skill.name}`} skill={skill} />);
+};

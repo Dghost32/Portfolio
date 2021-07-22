@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
-/* Components */
-import Skill from "./Skill";
+import React, { useState, useEffect, ReactElement } from "react";
 /* Data */
 import skillFilters, { translateFilter } from "../data/skillFilters";
-import skills from "../data/skills";
+import { filterSkills } from "../data/skills";
 /* Types */
-import skill from "../types/skill";
 import { appliedFilter, skillsList } from "../types/stateTypes/SkillsStates";
 /* Css */
 import "../styles/Skills.css";
@@ -15,52 +12,39 @@ const Skills = () => {
   const [skillsList, setSkillsList]: skillsList = useState([]);
 
   useEffect(() => {
-    filterSkills();
+    setSkillsList(filterSkills(appliedFilter));
   }, [appliedFilter]);
 
-  let addActiveFilter = (sf?: string) => {
+  let toggleActiveFilter = (sf?: string): void => {
+    /* removes current */
     document
       .getElementById(`filter${translateFilter(appliedFilter)}`)
       ?.classList.remove("filter-active");
-
+    /* adds new one */
     document.getElementById(`filter${sf}`)?.classList.add("filter-active");
   };
 
-  let filterSkills = () => {
-    !appliedFilter
-      ? setSkillsList(
-          skills.map((skill: skill) => (
-            <Skill key={`skill-${skill.name}`} skill={skill} />
-          ))
-        )
-      : setSkillsList(
-          skills
-            .filter((skill: skill) => skill.filter[appliedFilter] === 1)
-            .map((skill: skill) => (
-              <Skill key={`skill-${skill.name}`} skill={skill} />
-            ))
-        );
-  };
-
-  let handleFilterClick = (sf: string) => {
+  let handleFilterClick = (sf: string): void => {
     sf === "All"
       ? setAppliedFilter(undefined)
       : setAppliedFilter(translateFilter(sf));
-    addActiveFilter(sf);
+    toggleActiveFilter(sf);
   };
 
-  let filters = skillFilters.map((sf: string, index: number) => (
-    <p
-      key={`${index}-${sf}`}
-      id={"filter" + sf}
-      className={`txt-ws txt-light filter ${sf === "All" && "filter-active"}`}
-      onClick={(ev: React.MouseEvent<HTMLParagraphElement>) =>
-        handleFilterClick(ev.currentTarget.innerText)
-      }
-    >
-      {sf}
-    </p>
-  ));
+  let filters: Array<ReactElement> = skillFilters.map(
+    (sf: string, index: number): ReactElement => (
+      <p
+        key={`${index}-${sf}`}
+        id={"filter" + sf}
+        className={`txt-ws txt-light filter ${sf === "All" && "filter-active"}`}
+        onClick={(ev: React.MouseEvent<HTMLParagraphElement>) =>
+          handleFilterClick(ev.currentTarget.innerText)
+        }
+      >
+        {sf}
+      </p>
+    )
+  );
 
   return (
     <div id="skills" className="skills-container">

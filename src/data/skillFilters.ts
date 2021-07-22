@@ -17,6 +17,7 @@ export let translateFilter = (
   if (filter === "back") return "Backend";
   if (filter === "design") return "Design";
 
+  if (filter === "All") return undefined;
   if (filter === "Frontend") return "front";
   if (filter === "Backend") return "back";
   return "design";
