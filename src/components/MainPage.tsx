@@ -8,10 +8,12 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { BsChevronDoubleDown } from "react-icons/bs";
+import Particles from "./Particles";
 
 const MainPage = () => {
   return (
-    <div id="main-page" className="main-page-container">
+    <div id="main-page" className="page main">
+      <Particles c="#ffffff" n={25} />
       <MyInfo />
       <Socials />
       <GoDownArrow />

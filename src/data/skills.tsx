@@ -73,7 +73,6 @@ let skills: Array<skill> = [
     icon: <FaBootstrap />,
     filter: {
       front: 1,
-      design: 1,
     },
   },
   {
@@ -81,7 +80,6 @@ let skills: Array<skill> = [
     icon: <SiMaterialUi />,
     filter: {
       front: 1,
-      design: 1,
     },
   },
   {

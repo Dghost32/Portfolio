@@ -1,13 +1,5 @@
-.whoami-container {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+.whoami {
   background-color: var(--col-light);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .whoami-content {
@@ -26,12 +18,17 @@
   justify-content: space-between;
 }
 
+.upper-wave {
+  position: absolute;
+  top: -0.5rem;
+}
+
 .bottom-ball {
   position: absolute;
-  bottom: -10vw;
-  left: -5vw;
-  width: 20vw;
-  height: 20vw;
+  bottom: -10vh;
+  left: -5vh;
+  width: 20vh;
+  height: 20vh;
   background-color: var(--col-dark);
   border-radius: 50%;
 }

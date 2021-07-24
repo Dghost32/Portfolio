@@ -18,13 +18,14 @@ const Skills = () => {
   let toggleActiveFilter = (sf?: string): void => {
     /* removes current */
     document
-      .getElementById(`filter${translateFilter(appliedFilter)}`)
+      .getElementById(`filter-${translateFilter(appliedFilter)}`)
       ?.classList.remove("filter-active");
     /* adds new one */
-    document.getElementById(`filter${sf}`)?.classList.add("filter-active");
+    document.getElementById(`filter-${sf}`)?.classList.add("filter-active");
   };
 
   let handleFilterClick = (sf: string): void => {
+    console.log(sf);
     sf === "All"
       ? setAppliedFilter(undefined)
       : setAppliedFilter(translateFilter(sf));
@@ -35,10 +36,10 @@ const Skills = () => {
     (sf: string, index: number): ReactElement => (
       <p
         key={`${index}-${sf}`}
-        id={"filter" + sf}
+        id={"filter-" + sf}
         className={`txt-ws txt-light filter ${sf === "All" && "filter-active"}`}
         onClick={(ev: React.MouseEvent<HTMLParagraphElement>) =>
-          handleFilterClick(ev.currentTarget.innerText)
+          handleFilterClick(ev.currentTarget.id.split("-")[1])
         }
       >
         {sf}
@@ -47,7 +48,7 @@ const Skills = () => {
   );
 
   return (
-    <div id="skills" className="skills-container">
+    <div id="skills" className="page skills">
       {/* lEFT  */}
       <div className="section">
         <h1 className="txt-sb txt-wb txt-pink">Skills</h1>

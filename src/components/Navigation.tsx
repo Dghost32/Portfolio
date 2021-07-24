@@ -24,6 +24,7 @@ const NavMenu = () => (
     <NavMenuItem to="main-page">
       <p>Main Page</p>
     </NavMenuItem>
+    <hr style={{ height: "1px", backgroundColor: "#c2185b", border: "none" }} />
     <NavMenuItem to="whoami">
       <p>Whoami</p>
     </NavMenuItem>
@@ -32,10 +33,6 @@ const NavMenu = () => (
     </NavMenuItem>
     <NavMenuItem to="skills">
       <p>Skills</p>
-    </NavMenuItem>
-    <hr style={{ height: "1px", backgroundColor: "#c2185b", border: "none" }} />
-    <NavMenuItem to="contact">
-      <p>Contact</p>
     </NavMenuItem>
   </Dropdown.Menu>
 );

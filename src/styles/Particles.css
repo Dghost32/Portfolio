@@ -1,0 +1,6 @@
+.particles {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  z-index: -1;
+}
