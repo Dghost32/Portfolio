@@ -1,18 +1,22 @@
 .project-card {
-  margin-left: 1rem;
   position: relative;
-  margin-right: 1rem;
-  margin-bottom: 2rem;
-  width: 12.5rem;
-  height: 16.625rem;
-  border-radius: 0.625rem;
+  /* flex */
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   align-items: center;
-  overflow: hidden;
   justify-content: center;
+  overflow: hidden;
+  /* margin */
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  /* sizing */
+  width: 12.5rem;
+  height: 16.625rem;
+  /* stylign */
+  border-radius: 0.625rem;
   color: var(--col-light);
+  box-shadow: 0.5rem 0.5rem 1rem rgba(255, 255, 255, 0.1);
 }
 
 .no-hover {
@@ -29,32 +33,6 @@
   position: absolute;
   height: inherit;
   opacity: 0.5;
-}
-
-.getup {
-  z-index: 1;
-}
-
-.technologies {
-  display: flex;
-  position: absolute;
-  top: 0;
-  width: inherit;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0.5rem;
-}
-
-.tech {
-  background-color: var(--col-light);
-  margin: 0.5rem;
-  opacity: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20%;
-  padding: 3px;
-  border-radius: 0.4rem;
 }
 
 .learn-more {

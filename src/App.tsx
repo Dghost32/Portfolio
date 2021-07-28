@@ -7,6 +7,7 @@ import Whoami from "./components/Whoami";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import ProjectModalState from "./context/ProjectModalState";
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
       <Navigation />
       <MainPage />
       <Whoami />
-      <Projects />
+      <ProjectModalState>
+        <Projects />
+      </ProjectModalState>
+
       <Skills />
       <Contact />
     </div>

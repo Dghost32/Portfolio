@@ -1,8 +1,13 @@
 import React from "react";
-import projects from "../data/projects";
-import "../styles/Projects.css";
-import { project } from "../types/project";
+/* components */
 import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectModal";
+/* data */
+import projects from "../data/projects";
+/* types */
+import { project } from "../types/project";
+/* style */
+import "../styles/Projects.css";
 
 const Projects = () => {
   let ProjectsList: Array<JSX.Element> = [];
@@ -25,6 +30,7 @@ const Projects = () => {
         </p>
         <div className="projects-cards-container">{ProjectsList}</div>
       </div>
+      <ProjectModal />
     </div>
   );
 };

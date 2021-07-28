@@ -1,8 +1,8 @@
 import { project } from "../project";
 
-export type projectCardOpenState = [
-  projectCardOpen: boolean,
-  setProjectCardOpen: Function
+export type projectModalOpenState = [
+  projectModalOpen: "shown" | "hidden",
+  setProjectModalOpen: Function
 ];
 
 export type currentProjectState = [
