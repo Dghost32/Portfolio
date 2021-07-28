@@ -25,7 +25,6 @@ const Skills = () => {
   };
 
   let handleFilterClick = (sf: string): void => {
-    console.log(sf);
     sf === "All"
       ? setAppliedFilter(undefined)
       : setAppliedFilter(translateFilter(sf));
