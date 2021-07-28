@@ -1,13 +1,13 @@
-import React from "react";
-import "./App.css";
-import "./Scrollbar.css";
+import ProjectModalState from "./context/ProjectModalState";
+/* Components */
 import Navigation from "./components/Navigation";
 import MainPage from "./components/MainPage";
 import Whoami from "./components/Whoami";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import ProjectModalState from "./context/ProjectModalState";
+/* Styles */
+import "./App.css";
+import "./Scrollbar.css";
 
 function App() {
   return (
@@ -18,9 +18,7 @@ function App() {
       <ProjectModalState>
         <Projects />
       </ProjectModalState>
-
       <Skills />
-      <Contact />
     </div>
   );
 }

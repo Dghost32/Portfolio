@@ -1,11 +1,14 @@
-.skills {
+div.skills {
+  display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   background-color: var(--col-light);
 }
 
 .section {
   width: 40vw;
+  margin: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -21,6 +24,7 @@
 
 .filters {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
@@ -38,7 +42,7 @@
   cursor: pointer;
 }
 
-.filter-active {
+p.filter-active {
   color: var(--col-pink);
   font-weight: 600;
 }

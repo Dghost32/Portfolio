@@ -1,9 +1,11 @@
-import "../styles/ProjectCard.css";
+import React, { useContext } from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
 import { projectCardProps } from "../types/propTypes/ProjectCardProps";
-import { useContext } from "react";
 import ProjectModalContext from "../context/ProjectModalContext";
+/* types */
 import { project } from "../types/project";
+/* styles */
+import "../styles/ProjectCard.css";
 
 const ProjectCard = ({ prj, id }: projectCardProps) => {
   let { setProjectModalOpen, setCurrentProject } =

@@ -16,7 +16,7 @@
   /* stylign */
   border-radius: 0.625rem;
   color: var(--col-light);
-  box-shadow: 0.5rem 0.5rem 1rem rgba(255, 255, 255, 0.1);
+  box-shadow: 0.2rem 0.5rem 1rem rgba(255, 255, 255, 0.2);
 }
 
 .no-hover {
@@ -32,7 +32,7 @@
   border-radius: 0.625rem;
   position: absolute;
   height: inherit;
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 .learn-more {
@@ -47,6 +47,12 @@
   background-color: rgba(26, 26, 26, 0.3);
   border-radius: 0.5rem;
 }
+
+.learn-more:hover,
+.learn-more:focus {
+  background-color: rgba(26, 26, 26, 0.75);
+}
+
 @media (max-width: 800px) {
   .project-card {
     width: 9.375rem;

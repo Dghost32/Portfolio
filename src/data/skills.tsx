@@ -1,9 +1,9 @@
 /* icons */
 import { AiFillHtml5 } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
-import { FaNodeJs, FaBootstrap } from "react-icons/fa";
+import { FaNodeJs, FaBootstrap, FaYarn } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
-import { DiCss3, DiReact, DiGitBranch } from "react-icons/di";
+import { DiCss3, DiReact, DiGitBranch, DiNpm } from "react-icons/di";
 import { SiJavascript, SiTypescript, SiMaterialUi } from "react-icons/si";
 /* types */
 import skill from "../types/skill";
@@ -67,6 +67,16 @@ let skills: Array<skill> = [
     name: "Github",
     icon: <AiFillGithub />,
     filter: {},
+  },
+  {
+    name: "Npm",
+    icon: <DiNpm />,
+    filter: { back: 1 },
+  },
+  {
+    name: "Yarn",
+    icon: <FaYarn />,
+    filter: { back: 1 },
   },
   {
     name: "Bootstrap",

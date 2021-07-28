@@ -10,9 +10,9 @@ import { project } from "../types/project";
 import "../styles/Projects.css";
 
 const Projects = () => {
-  let ProjectsList: Array<JSX.Element> = [];
+  let projectCards: Array<JSX.Element> = [];
   projects.forEach((prj: project) =>
-    ProjectsList.push(
+    projectCards.push(
       <ProjectCard
         key={`prj-${prj.name}`}
         prj={prj}
@@ -28,7 +28,7 @@ const Projects = () => {
         <p className="txt-ss txt-wm txt-light">
           Here you can see some of my projects, hope you like them!
         </p>
-        <div className="projects-cards-container">{ProjectsList}</div>
+        <div className="projects-cards-container">{projectCards}</div>
       </div>
       <ProjectModal />
     </div>

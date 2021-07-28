@@ -14,13 +14,16 @@ const Navigation = () => {
 export default Navigation;
 
 const NavButton = () => (
-  <Dropdown.Toggle id="nav" className="nav-btn txt-sm txt-dark">
+  <Dropdown.Toggle id="nav" className="navigation-btn txt-sm txt-dark">
     <NavMenuIcon />
   </Dropdown.Toggle>
 );
 
 const NavMenu = () => (
-  <Dropdown.Menu id="nav-menu-container" className="nav-menu-container">
+  <Dropdown.Menu
+    id="navigation-menu-container"
+    className="navigation-menu-container"
+  >
     <NavMenuItem to="main-page">
       <p>Main Page</p>
     </NavMenuItem>
@@ -52,7 +55,7 @@ const NavMenuItem = ({
   children: JSX.Element;
 }) => (
   <div
-    className="txt-dark nav-menu-item"
+    className="txt-dark navigation-menu-item"
     onClick={() => document.getElementById(to)?.scrollIntoView()}
   >
     {children}

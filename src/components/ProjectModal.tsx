@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { IoIosOpen, IoLogoGithub, IoMdCloseCircle } from "react-icons/io";
-import Tooltip from "@material-ui/core/Tooltip";
+import { IoIosOpen, IoLogoGithub, IoMdClose } from "react-icons/io";
 import ProjectCardContext from "../context/ProjectModalContext";
 import "../styles/ProjectModal.css";
-import { project } from "../types/project";
+import { Tooltip } from "@material-ui/core";
+import { images, projectInfo } from "../types/stateTypes/ProjectModalStates";
 
 const ProjectModal = () => {
   let { projectModalOpen, setProjectModalOpen, currentProject } =
@@ -24,7 +24,7 @@ const ProjectModal = () => {
 
 export default ProjectModal;
 
-let Images = ({ prj }: { prj: project | undefined }) => (
+let Images = ({ prj }: images) => (
   <div className="images-container">
     <img src={prj?.imageDesktop} alt={prj?.name + "-desktop"} />
     <img src={prj?.imageIpad} alt={prj?.name + "-ipad"} />
@@ -32,13 +32,7 @@ let Images = ({ prj }: { prj: project | undefined }) => (
   </div>
 );
 
-let ProjectInfo = ({
-  prj,
-  setProjectModalOpen,
-}: {
-  prj: project | undefined;
-  setProjectModalOpen: Function | undefined;
-}) => {
+let ProjectInfo = ({ prj, setProjectModalOpen }: projectInfo) => {
   let techs = prj?.technologies.map((tech, index) => (
     <i className="txt-sm col-dark tech" key={`tech-modal-${index}`}>
       {tech}
@@ -54,20 +48,23 @@ let ProjectInfo = ({
       <p className="txt-wm">{prj?.description}</p>
       <div className="flex-cols">
         <div className="flex-cols">
-          <Tooltip title="Check source code!">
-            <a
-              className="btn github-btn"
-              href={prj?.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="txt-dark txt-sm">
-                <IoLogoGithub />
-              </i>
-            </a>
-          </Tooltip>
+          {prj?.github && (
+            <Tooltip title="check source code!">
+              <a
+                href={prj?.github}
+                className="link-btn flex-cols"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="txt-dark txt-sm">
+                  <IoLogoGithub />
+                </i>
+                <p className="txt-ws">Github</p>
+              </a>
+            </Tooltip>
+          )}
           {prj?.page && (
-            <div className="btn visit-page-btn flex-cols">
+            <div className="link-btn flex-cols">
               <a href={prj?.page} target="_blank" rel="noreferrer">
                 <i className="txt-dark txt-sm">
                   <IoIosOpen />
@@ -79,10 +76,10 @@ let ProjectInfo = ({
         </div>
         <div className="close-btn">
           <i
-            className="close-modal txt-sm txt-wm txt-pink"
+            className="close-modal txt-sm txt-pink"
             onClick={() => setProjectModalOpen && setProjectModalOpen("hidden")}
           >
-            <IoMdCloseCircle />
+            <IoMdClose />
           </i>
         </div>
       </div>

@@ -36,7 +36,9 @@ const Skills = () => {
       <p
         key={`${index}-${sf}`}
         id={"filter-" + sf}
-        className={`txt-ws txt-light filter ${sf === "All" && "filter-active"}`}
+        className={`txt-ws txt-light filter ${
+          sf === "All" ? "filter-active" : ""
+        }`}
         onClick={(ev: React.MouseEvent<HTMLParagraphElement>) =>
           handleFilterClick(ev.currentTarget.id.split("-")[1])
         }
@@ -48,17 +50,16 @@ const Skills = () => {
 
   return (
     <div id="skills" className="page skills">
-      {/* lEFT  */}
       <div className="section">
         <h1 className="txt-sb txt-wb txt-pink">Skills</h1>
         <p className="txt-ss txt-wm txt-dark">
           In this section you can see the technologies i’ve worked with.
         </p>
       </div>
-      {/* RIGHT */}
+
       <div className="section">
         <div className="skills-box">
-          <div className="filters">{filters}</div>
+          <div className="filters ">{filters}</div>
           <div className="skills-elements-container">{skillsList}</div>
         </div>
       </div>

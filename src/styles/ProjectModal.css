@@ -83,29 +83,22 @@
   border-radius: 0.4rem;
 }
 
-.btn:hover {
-  opacity: 1;
-}
-
-.github-btn {
-  opacity: 0.7;
-}
-
-.visit-page-btn {
+.link-btn {
   background-color: var(--col-light);
   opacity: 0.7;
   border-radius: 0.4rem;
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: var(--col-dark);
+  cursor: pointer;
+}
+
+.link-btn:hover {
+  opacity: 1;
 }
 
 .close-btn {
-  opacity: 0.7;
-}
-
-.close-btn:hover {
-  transition: transform 0.5s;
-  opacity: 1;
-  transform: rotate(360deg);
+  cursor: pointer;
 }
 
 /* animations */
