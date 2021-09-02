@@ -23,13 +23,14 @@
 /* images  */
 .images-container {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   align-items: flex-start;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 1.5rem;
   padding: 1rem;
   transition: transform 0.5s;
+  cursor: pointer;
 }
 
 .images-container > img {
@@ -41,19 +42,8 @@
   margin-bottom: 1rem;
 }
 
-.images-container:hover,
-.images-container:focus {
-  transform: scale(140%);
-}
-
-@media (max-width: 1000px) {
-  .modal-container {
-    width: 80vw;
-  }
-
-  .images-container > img {
-    height: 35vh;
-  }
+.images-container.expand {
+  transform: scale(110%);
 }
 
 /* project info */
@@ -61,14 +51,25 @@
   margin-left: 1rem;
 }
 
-.flex-cols {
+.project-info > p {
+  margin: 0.5em 0;
+}
+
+.flex {
   display: flex;
-  align-items: center;
+}
+
+.flex.jc-sb {
   justify-content: space-between;
+}
+
+.flex.ai-c {
+  align-items: center;
 }
 
 .techs {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tech {
@@ -104,10 +105,44 @@
 /* animations */
 .shown {
   transition: transform 0.6s ease;
-  transform: translateX(0);
 }
 
 .hidden {
   transition: transform 0.6s ease;
   transform: translateX(100vw);
+}
+
+a.link-btn {
+  text-decoration: none;
+  padding: 0.3rem 0.3rem;
+}
+
+/* 1500px */
+@media (max-width: 93.75em) {
+  .modal-container {
+    width: 60vw;
+  }
+
+  .images-container > img {
+    height: 45vh;
+  }
+}
+
+/* 1000px */
+@media (max-width: 62.5em) {
+  .modal-container {
+    width: 80vw;
+  }
+
+  .images-container > img {
+    height: 35vh;
+  }
+
+  .modal-container .project-info > div:nth-child(1) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal-container .project-info > div:nth-child(1) .techs i:nth-child(1) {
+    margin-left: 0;
+  }
 }

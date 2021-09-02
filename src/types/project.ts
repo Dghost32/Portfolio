@@ -1,7 +1,7 @@
 export type project = {
   name: string;
   description: string;
-  github: string;
+  github?: string;
   page?: string;
   imageDesktop: string;
   imageIpad: string;

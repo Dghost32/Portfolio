@@ -25,7 +25,13 @@ const ProjectModal = () => {
 export default ProjectModal;
 
 let Images = ({ prj }: images) => (
-  <div className="images-container">
+  <div
+    className="images-container"
+    onClick={() => {
+      const el = document.querySelector(".images-container");
+      el?.classList.toggle("expand");
+    }}
+  >
     <img src={prj?.imageDesktop} alt={prj?.name + "-desktop"} />
     <img src={prj?.imageIpad} alt={prj?.name + "-ipad"} />
     <img src={prj?.imageMobile} alt={prj?.name + "-mobile"} />
@@ -41,18 +47,18 @@ let ProjectInfo = ({ prj, setProjectModalOpen }: projectInfo) => {
 
   return (
     <div className="project-info">
-      <div className="flex-cols">
+      <div className="flex jc-sb ai-c">
         <h1 className="txt-sm txt-wb txt-pink">{prj?.name}</h1>
         <div className="techs ">{techs}</div>
       </div>
       <p className="txt-wm">{prj?.description}</p>
-      <div className="flex-cols">
-        <div className="flex-cols">
+      <div className="flex jc-sb ai-c ">
+        <div className="flex jc-sb ai-c">
           {prj?.github && (
             <Tooltip title="check source code!">
               <a
                 href={prj?.github}
-                className="link-btn flex-cols"
+                className="link-btn txt-dark flex jc-sb ai-c"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -64,14 +70,17 @@ let ProjectInfo = ({ prj, setProjectModalOpen }: projectInfo) => {
             </Tooltip>
           )}
           {prj?.page && (
-            <div className="link-btn flex-cols">
-              <a href={prj?.page} target="_blank" rel="noreferrer">
-                <i className="txt-dark txt-sm">
-                  <IoIosOpen />
-                </i>
-              </a>
-              <p className="txt-ws">Visit page</p>
-            </div>
+            <a
+              className="txt-dark link-btn flex jc-sb ai-c"
+              href={prj?.page}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="txt-sm">
+                <IoIosOpen />
+              </i>
+              <p className="txt-ws ">Visit page</p>
+            </a>
           )}
         </div>
         <div className="close-btn">

@@ -25,7 +25,7 @@ projects.set("redboard", {
   name: "RedBoard",
   description:
     "Fullstack responsive web application to upload, view and download useful study files for the students of the UNAL. Developed as a course final project using react, javascript and firebase services like firestore, analitics and auth.",
-  github: "https://github.com/Dghost32/red-board",
+  page: "https://redboardun.com/",
   imageDesktop: "./images/project-images/redboard/redboard-desktop.png",
   imageIpad: "./images/project-images/redboard/redboard-ipad.png",
   imageMobile: "./images/project-images/redboard/redboard-mobile.png",
