@@ -1,10 +1,11 @@
-import { FaReact } from "react-icons/fa";
+import { FaCss3, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import {
   SiFirebase,
   SiJavascript,
   SiRedux,
   SiTypescript,
 } from "react-icons/si";
+import { IoLogoPwa } from "react-icons/io5";
 import { project } from "../types/project";
 
 let projects: Map<string, project> = new Map();
@@ -41,6 +42,17 @@ projects.set("confusion", {
   imageIpad: "./images/project-images/confusion/confusion-ipad.png",
   imageMobile: "./images/project-images/confusion/confusion-mobile.png",
   technologies: [<FaReact />, <SiJavascript />, <SiRedux />],
+});
+
+projects.set("calculator", {
+  name: "calculator",
+  description: "Frontend responsive PWA calculator.",
+  github: "https://github.com/Dghost32/calculator",
+  page: "https://calculator-cj.netlify.app",
+  imageDesktop: "./images/project-images/calculator/desktop.png",
+  imageIpad: "./images/project-images/calculator/ipad.png",
+  imageMobile: "./images/project-images/calculator/mobile.png",
+  technologies: [<FaHtml5 />, <FaCss3 />, <FaJs />, <IoLogoPwa />],
 });
 
 projects.set("portfolio", {
