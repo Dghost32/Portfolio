@@ -3,7 +3,14 @@ import { AiFillHtml5 } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { FaNodeJs, FaBootstrap, FaYarn } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
-import { DiCss3, DiReact, DiGitBranch, DiNpm, DiLinux } from "react-icons/di";
+import {
+  DiCss3,
+  DiReact,
+  DiGitBranch,
+  DiNpm,
+  DiLinux,
+  DiPhp,
+} from "react-icons/di";
 import { SiJavascript, SiTypescript, SiMaterialUi } from "react-icons/si";
 /* types */
 import skill from "../types/skill";
@@ -102,6 +109,13 @@ let skills: Array<skill> = [
     icon: <FiFigma />,
     filter: {
       design: 1,
+    },
+  },
+  {
+    name: "PHP",
+    icon: <DiPhp />,
+    filter: {
+      back: 1,
     },
   },
 ];
