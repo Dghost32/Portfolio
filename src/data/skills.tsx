@@ -91,6 +91,13 @@ let skills: Array<skill> = [
     filter: { back: 1 },
   },
   {
+    name: "PHP",
+    icon: <DiPhp />,
+    filter: {
+      back: 1,
+    },
+  },
+  {
     name: "Bootstrap",
     icon: <FaBootstrap />,
     filter: {
@@ -109,13 +116,6 @@ let skills: Array<skill> = [
     icon: <FiFigma />,
     filter: {
       design: 1,
-    },
-  },
-  {
-    name: "PHP",
-    icon: <DiPhp />,
-    filter: {
-      back: 1,
     },
   },
 ];

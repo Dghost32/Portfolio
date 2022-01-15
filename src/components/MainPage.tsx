@@ -31,7 +31,7 @@ const MyInfo = () => (
       <span className="txt-light">Jimenez</span>
       <span className="txt-pink"> /&gt;</span>
     </div>
-    <span className="txt-ss txt-ws txt-light">Jr FrontEnd Developer</span>
+    <span className="txt-ss txt-ws txt-light">Jr Fullstack Developer</span>
   </>
 );
 

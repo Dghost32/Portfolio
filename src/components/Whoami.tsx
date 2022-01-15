@@ -31,9 +31,9 @@ const Content = () => (
     <h1 className="txt-sb txt-wb txt-pink">WHOAMI</h1>
     <p className="txt-wm">
       I’m a systems engineering student at the national university of Colombia,
-      passionate about web development, especially on front-end and UI/UX
-      design. I'm currently looking for the right opportunity to work in an
-      environment that will help me progress in a Front-End developer role.
+      passionate about web development, especially on Frontend. I'm currently
+      looking for the right opportunity to work in an environment that will help
+      me progress as a Fullstack developer.
     </p>
     <div className="hobies">
       <p className="txt-wb">hobbies:</p>
