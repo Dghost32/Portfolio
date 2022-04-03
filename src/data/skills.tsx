@@ -1,17 +1,23 @@
 /* icons */
 import { AiFillHtml5 } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
-import { FaNodeJs, FaBootstrap, FaYarn } from "react-icons/fa";
+import { FaNodeJs, FaBootstrap } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
 import {
   DiCss3,
   DiReact,
   DiGitBranch,
-  DiNpm,
   DiLinux,
   DiPhp,
+  DiMysql,
+  DiMongodb,
 } from "react-icons/di";
-import { SiJavascript, SiTypescript, SiMaterialUi } from "react-icons/si";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiMaterialUi,
+  SiJest,
+  SiFirebase,
+} from "react-icons/si";
 /* types */
 import skill from "../types/skill";
 /* Components */
@@ -19,6 +25,13 @@ import Skill from "../components/Skill";
 
 /* Skills array, to add a new skill just need to add a new skill object to this array according to skill's object interface*/
 let skills: Array<skill> = [
+  {
+    name: "React",
+    icon: <DiReact />,
+    filter: {
+      front: 1,
+    },
+  },
   {
     name: "Html",
     icon: <AiFillHtml5 />,
@@ -52,6 +65,13 @@ let skills: Array<skill> = [
     },
   },
   {
+    name: "PHP",
+    icon: <DiPhp />,
+    filter: {
+      back: 1,
+    },
+  },
+  {
     name: "Node.js",
     icon: <FaNodeJs />,
     filter: {
@@ -59,41 +79,38 @@ let skills: Array<skill> = [
     },
   },
   {
-    name: "React",
-    icon: <DiReact />,
+    name: "Express",
+    icon: <FaNodeJs />,
     filter: {
-      front: 1,
+      back: 1,
     },
   },
   {
-    name: "Git",
-    icon: <DiGitBranch />,
-    filter: {},
-  },
-  {
-    name: "Github",
-    icon: <AiFillGithub />,
-    filter: {},
-  },
-  {
-    name: "Npm",
-    icon: <DiNpm />,
-    filter: { back: 1 },
-  },
-  {
-    name: "Linux",
-    icon: <DiLinux />,
-    filter: { back: 1 },
-  },
-  {
-    name: "Yarn",
-    icon: <FaYarn />,
-    filter: { back: 1 },
-  },
-  {
-    name: "PHP",
-    icon: <DiPhp />,
+    name: "Jest",
+    icon: <SiJest />,
     filter: {
+      test: 1,
+    },
+  },
+  {
+    name: "SQL",
+    icon: <DiMysql />,
+    filter: {
+      db: 1,
+    },
+  },
+  {
+    name: "MongoDB",
+    icon: <DiMongodb />,
+    filter: {
+      db: 1,
+    },
+  },
+  {
+    name: "Firebase",
+    icon: <SiFirebase />,
+    filter: {
+      db: 1,
       back: 1,
     },
   },
@@ -112,6 +129,16 @@ let skills: Array<skill> = [
     },
   },
   {
+    name: "Git",
+    icon: <DiGitBranch />,
+    filter: {},
+  },
+  {
+    name: "Linux",
+    icon: <DiLinux />,
+    filter: {},
+  },
+  {
     name: "Figma",
     icon: <FiFigma />,
     filter: {
@@ -123,7 +150,7 @@ let skills: Array<skill> = [
 export default skills;
 
 export let filterSkills = (
-  filter: "front" | "back" | "design" | undefined
+  filter: "front" | "back" | "design" | "db" | "test" | undefined
 ): Array<JSX.Element> => {
   if (!filter)
     return skills.map((skill: skill) => (

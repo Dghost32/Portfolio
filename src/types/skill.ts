@@ -18,6 +18,8 @@ type filter = {
   front?: 0 | 1;
   back?: 0 | 1;
   design?: 0 | 1;
+  test?: 0 | 1;
+  db?: 0 | 1;
 };
 
 export default skill;
