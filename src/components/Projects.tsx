@@ -24,7 +24,7 @@ const Projects = () => {
   return (
     <div id="projects" className="page projects">
       <div className="projects-content">
-        <h1 className="txt-pink txt-sb txt-wb"> PROJECTS</h1>
+        <h1 className="txt-pink txt-sb txt-wb">Projects</h1>
         <p className="txt-ss txt-wm txt-light">
           Here you can see some of my projects, hope you like them!
         </p>

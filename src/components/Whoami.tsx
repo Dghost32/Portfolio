@@ -28,12 +28,17 @@ const UpperWave = () => (
 
 const Content = () => (
   <div className="whoami-content">
-    <h1 className="txt-sb txt-wb txt-pink">WHOAMI</h1>
-    <p className="txt-wm">
-      I’m a systems engineering student at the national university of Colombia,
-      passionate about web development, especially on Frontend. I'm currently
-      looking for the right opportunity to work in an environment that will help
-      me progress as a Fullstack developer.
+    <h1 className="txt-sb txt-wb txt-pink">Who am i</h1>
+    <p className="txt-ss txt-dark">
+      I'm a Full-Stack Software Engineer proficient in creating robust and
+      scalable web and mobile applications. With a strong foundation in
+      <strong> TypeScript</strong>, and <strong> React</strong>. My expertise
+      extends to back-end development using <strong> Express.js</strong>,
+      <strong> MySQL</strong>, <strong> RESTful APIs</strong>, and
+      <strong> GraphQL</strong>. I use <strong> React Native </strong> to create
+      engaging cross-platform mobile experiences. Thriving in agile
+      environments, I am passionate about leveraging technology to deliver
+      innovative solutions.
     </p>
     <div className="hobies">
       <p className="txt-wb">hobbies:</p>

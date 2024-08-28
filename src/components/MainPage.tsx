@@ -4,7 +4,6 @@ import Tooltip from "@material-ui/core/Tooltip";
 /* Styles */
 import "../styles/MainPage.css";
 /* icons */
-import { AiOutlineWhatsApp } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { BsChevronDoubleDown } from "react-icons/bs";
@@ -31,7 +30,7 @@ const MyInfo = () => (
       <span className="txt-light">Jimenez</span>
       <span className="txt-pink"> /&gt;</span>
     </div>
-    <span className="txt-ss txt-ws txt-light">Jr Fullstack Developer</span>
+    <span className="txt-ss txt-ws txt-light">Fullstack Web Developer</span>
   </>
 );
 
@@ -58,18 +57,6 @@ const Socials = () => (
       >
         <i className="socials-icon">
           <FaLinkedinIn />
-        </i>
-      </a>
-    </Tooltip>
-    <Tooltip title="Whatsapp">
-      <a
-        aria-label="Whatsapp"
-        href="https://wa.me/+573016244869"
-        rel="noreferrer"
-        target="_blank"
-      >
-        <i className="socials-icon" aria-label="whatsapp">
-          <AiOutlineWhatsApp />
         </i>
       </a>
     </Tooltip>

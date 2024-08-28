@@ -32,22 +32,24 @@ div.skills {
 }
 
 .filter {
-  background-color: var(--col-dark);
+  background-color: var(--light-dark);
   min-width: 30%;
   margin-left: 0.3rem;
+  padding: 0.2rem 0;
   margin-right: 0.3rem;
   margin-top: 0.3rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .filter:hover {
   font-weight: 600;
+  background-color: var(--col-dark);
   cursor: pointer;
 }
 
 p.filter-active {
-  color: var(--col-pink);
   font-weight: 600;
+  background-color: var(--col-dark);
 }
 
 .skills-elements-container {

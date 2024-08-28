@@ -24,28 +24,28 @@ const Skills = () => {
     document.getElementById(`filter-${sf}`)?.classList.add("filter-active");
   };
 
-  let handleFilterClick = (sf: string): void => {
-    sf === "All"
+  let handleFilterClick = (skillFilter: string): void => {
+    skillFilter === "All"
       ? setAppliedFilter(undefined)
-      : setAppliedFilter(translateFilter(sf));
-    toggleActiveFilter(sf);
+      : setAppliedFilter(translateFilter(skillFilter));
+    toggleActiveFilter(skillFilter);
   };
 
   let filters: Array<ReactElement> = skillFilters.map(
-    (sf: string, index: number): ReactElement => (
+    (skillFilter: string, index: number): ReactElement => (
       <p
-        key={`${index}-${sf}`}
-        id={"filter-" + sf}
-        className={`txt-ws txt-light filter ${
-          sf === "All" ? "filter-active" : ""
+        key={`${index}-${skillFilter}`}
+        id={"filter-" + skillFilter}
+        className={`txt-wb txt-light filter ${
+          skillFilter === "All" ? "filter-active" : ""
         }`}
-        onClick={(ev: React.MouseEvent<HTMLParagraphElement>) =>
-          handleFilterClick(ev.currentTarget.id.split("-")[1])
+        onClick={(e: React.MouseEvent<HTMLParagraphElement>) =>
+          handleFilterClick(e.currentTarget.id.split("-")[1])
         }
       >
-        {sf}
+        {skillFilter}
       </p>
-    )
+    ),
   );
 
   return (
@@ -59,7 +59,7 @@ const Skills = () => {
 
       <div className="section">
         <div className="skills-box">
-          <div className="filters ">{filters}</div>
+          <div className="filters">{filters}</div>
           <div className="skills-elements-container">{skillsList}</div>
         </div>
       </div>
